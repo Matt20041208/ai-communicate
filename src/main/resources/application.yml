@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: ai-code-helper
+  datasource:
+    url: jdbc:mysql://localhost:3306/ai_code_helper?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.yupi.aicodehelper.entity
+server:
+  port: 0
+  servlet:
+    context-path: /api
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        model-name: qwen-max
+        api-key: sk-8f7d431ee8974a2396a0669c1b3a9c74
+      streaming-chat-model:
+        model-name: qwen-turbo
+        api-key: sk-9af8582b73574561967f34f945f6db07
+      embedding-model:
+        model-name: text-embedding-v4
+        api-key: sk-321b42a8aec74b4685f96c8804506986
+bigmodel:
+  api-key: f8cd5ab9d584482da4f00000508dc202.6dtMZaTFV0vqZhmz
